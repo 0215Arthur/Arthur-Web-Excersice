@@ -1,0 +1,12 @@
+add_book.php          添加书籍的页面
+add_book_action.php   添加书籍的逻辑处理
+conn.php              数据库连接
+index.html            登陆页面
+login.php             登陆逻辑处理
+logout.php            退出逻辑
+register.html         用户注册页面
+register.php          用户注册的逻辑处理
+student.php           学生业务主页面
+teacher.php           老师业务主页面
+css                   css文件夹
+assets                css/js文件夹

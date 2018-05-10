@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>1552286-JavaScript表单验证</title>
+<script type="text/javascript">
+	function test(){
+		var x=document.forms["myTest"]["number"].value;
+		if(x==null||x<1||x>100)
+		{	
+			alert(x+":输入非法！");
+            return false;
+         }
+		else
+		{
+			alert(x+":输入正确！")
+		    return true;
+		}
+	}
+</script>
+</head>
+
+<body style="text-align: center">
+<h1 style="text-align: center">表单验证</h1>
+<hr>
+<p style="text-align: center">&nbsp;</p>
+<p style="font-size: 16px; text-align: center;"> 请输入1~100之间的一个数字
+	</p>
+	<form name="myTest" action="#" onsubmit="return test()">
+  <label for="number">Number:</label>
+  <input type="number" name="number" id="number">
+<input type="submit" align-self="center" name="submit" id="submit" value="提交">
+</form>
+</body>
+</html>

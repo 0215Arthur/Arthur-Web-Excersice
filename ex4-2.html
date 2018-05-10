@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>1552286-留言表单</title>
+<style type="text/css">
+.email {
+	width: 150px;
+	height: 20px;
+}
+.textarea {
+	border-radius: 4px;
+	text-align: left;
+	float: none;
+	clear: none;
+	width: 300px;
+	height: 150px;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+.tel {
+	height: 20px;
+}
+.tels {
+}
+.name {
+	height: 20px;
+}
+.select {
+	height: 20px;
+}
+	body{
+		
+		margin-bottom: 20px;
+		margin-left: 200px;
+		width: 60%;
+	}
+.submit {
+	margin-left: 70px;
+}
+.reset {
+	margin-left: 25px;
+}
+</style>
+<script type="text/javascript">
+	function test(){
+		var x=document.forms["myTest"]["textarea"].value;
+		var y=document.forms["myTest"]["textfield"].value;
+		if(x==null||x=="")
+		{	
+			alert("留言为空");
+            return false;
+         }
+		else if(y==null||y=="")
+		{
+			alert("姓名为空")
+		    return false;
+		}
+		else{
+			alert("提交成功！")
+		    return true;
+		}
+	}
+</script>
+</head>
+
+<body>
+<h2>请填写表单</h2>
+<hr>
+	<form action="#" name="myTest" onSubmit="return test()" method="post">
+<p>
+  <label for="textfield">姓名:</label>
+  <input name="textfield" type="text" class="name">
+</p>
+<p>
+  <label for="select">性别
+  :</label>
+  <select name="select" class="select">
+	  <option value ="volvo">男</option>
+  <option value ="saab">女</option>
+  </select>
+</p>
+<p class="tels">
+  <label for="tel">电话:</label>
+  <input name="tel" type="tel" class="tel">
+</p>
+<p>
+  <label for="email">电子邮件:</label>
+  <input name="email" type="email" class="email">
+</p>
+<p>
+  <label for="textarea">留言:</label>
+	<br>
+  <textarea name="textarea" wrap="hard" class="textarea"></textarea>
+</p>
+<p>
+  <input name="submit" type="submit" class="submit" value="提交"> 
+  <input name="reset" type="reset" class="reset" value="重置">
+</p>
+		</form>
+</body>
+</html>
